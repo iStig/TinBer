@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListenViewController : UIViewController
+@interface ListenViewController : CommonViewController
 
 @end

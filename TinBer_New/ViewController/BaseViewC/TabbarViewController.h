@@ -21,6 +21,6 @@
 }
 @property (nonatomic,retain) CustomTabbarView    *customTabbar;
 - (id)initWithControllers:(NSArray *)controllers;
-- (void)setAccessoryContent:(NSArray *)accessoryContent;
+//- (void)setAccessoryContent:(NSArray *)accessoryContent;
 
 @end

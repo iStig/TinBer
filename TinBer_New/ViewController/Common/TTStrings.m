@@ -57,4 +57,12 @@
     return strDest;
 }
 
+void TTAlert(NSString* message) {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@""
+                                                     message:message delegate:nil
+                                           cancelButtonTitle:Kconfirm
+                                           otherButtonTitles:nil] ;
+    [alert show];
+}
+
 @end

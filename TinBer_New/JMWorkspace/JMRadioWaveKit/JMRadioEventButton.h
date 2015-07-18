@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JMRadioEventButtonDelegate.h"
 
-@interface JMRadioEventButton : UIView
-
+@interface JMRadioEventButton : UIView<JMRadioEventButtonDelegate>
+@property (nonatomic, assign) id <JMRadioEventButtonDelegate> delegate;
++ (instancetype)eventView;
 @end

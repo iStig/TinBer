@@ -256,10 +256,12 @@
 #pragma mark Frames
 
 - (void)updateSELFFrame{
-    
     CGRect newViewFrame = self.frame;
     newViewFrame.size.width = [self.characterViewsArray count] * self.characterWidth;
-    newViewFrame.origin.x += self.frame.size.width - newViewFrame.size.width;
+//    if (self.superview.frame.size.width < newViewFrame.size.width - self.font.pointSize*2 ) {//宽仅小于等于上层view
+//        return;
+//    }
+    newViewFrame.origin.x = (self.superview.frame.size.width - newViewFrame.size.width)/2;//相对上层view居中
     self.frame = newViewFrame;
 }
 

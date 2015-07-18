@@ -34,4 +34,8 @@
     }];
 }
 
+- (void)didPressButtonEvent:(JMShakeResultType)type {
+    NSLog(@"子类实现");
+}
+
 @end

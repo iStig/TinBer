@@ -7,24 +7,6 @@
 //
 #import <Foundation/Foundation.h>
 
-#define FriendCircle [UIColor colorWithRed:57/255.0 green:74/255.0 blue:122/255.0 alpha:1.0]
-#define FriendCircleWidth 235
-#define FriendCircleZanWidth 220
-#define UIColorFromRGB(rgbValue) [UIColor \
-colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
-blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
-
-#define KfontLabel 10.0f //label字体
-
-//Debug Log
-#ifdef DEBUG
-#define TTDEBUGLOG(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#else
-#define TTDEBUGLOG(...)
-#endif
-
 //Log for print Rect, Size, Point
 #define TTSHOWRECT(rect) TTDEBUGLOG(@"rect.origin.x = %f, rect.origin.y = %f, rect.size.width = %f, rect.size.height = %f", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)
 #define TTSHOWSIZE(size) TTDEBUGLOG(@"size.width = %f, size.height = %f", size.width, size.height)

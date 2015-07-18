@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol JMButtonEventDelegate <NSObject>
+typedef NS_ENUM(NSUInteger, JMShakeResultType) {
+    JMShakeResultType_GoldCoins = 0,
+    JMShakeResultType_ShoppingCard = 1,
+    JMShakeResultType_NotWinning = 2,
+};
 
+@protocol JMButtonEventDelegate <NSObject>
+@optional
+- (void)didPressButtonEvent:(JMShakeResultType)type;
 @end

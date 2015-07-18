@@ -14,11 +14,6 @@
 #import "JMShakeNotWinning.h"
 #import "JMShakeShoppingCard.h"
 
-typedef NS_ENUM(NSUInteger, JMShakeResultType) {
-    JMShakeResultType_GoldCoins = 0,
-    JMShakeResultType_ShoppingCard = 1,
-    JMShakeResultType_NotWinning = 2,
-};
 
 @protocol JMShakeViewDelegate <NSObject>
 - (void)show;

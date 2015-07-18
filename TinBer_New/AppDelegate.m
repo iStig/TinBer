@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "TabbarViewController.h"
+#import "ActiviesHomeViewController.h"
+#import "ShakeViewController.h"
+#import "ListenViewController.h"
+#import "PrizeViewController.h"
+#import "MineViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +23,57 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self mainViewController];
+    
+    NSLog(@"%@",NSStringFromCGSize(self.window.frame.size));
+    [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)mainViewController {
+    
+    ActiviesHomeViewController *eivc = [[ActiviesHomeViewController alloc] init];
+    UINavigationController *tabOne = [[UINavigationController alloc] initWithRootViewController:eivc];
+    tabOne.navigationBar.tintColor = [UIColor blackColor];
+    
+    ShakeViewController *ervc = [[ShakeViewController alloc] init];
+    UINavigationController *tabTwo = [[UINavigationController alloc] initWithRootViewController:ervc];
+    tabTwo.navigationBar.tintColor = [UIColor blackColor];
+    
+    ListenViewController *tvc = [[ListenViewController alloc] init];
+    UINavigationController *tabThree = [[UINavigationController alloc] initWithRootViewController:tvc];
+    tabThree.navigationBar.tintColor = [UIColor blackColor];
+    
+    PrizeViewController *qvc = [[PrizeViewController alloc] init];
+    UINavigationController *tabFour = [[UINavigationController alloc] initWithRootViewController:qvc];
+    tabFour.navigationBar.tintColor = [UIColor blackColor];
+    
+    MineViewController * mineVc = [[MineViewController alloc] init];
+    UINavigationController *tabFive = [[UINavigationController alloc] initWithRootViewController:mineVc];
+    tabFive.navigationBar.tintColor = [UIColor blackColor];
+    
+     TabbarViewController *tabbarViewController = [[TabbarViewController alloc] initWithControllers:[NSArray arrayWithObjects:tabOne,tabTwo,tabThree,tabFour,tabFive,nil]];
+    
+    self.window.rootViewController = tabbarViewController;
+    [tabbarViewController.customTabbar selectedItemFrom:-1 to:0];
+    tabbarViewController.delegate = self;
+    
+    NSLog(@"window frame %@", NSStringFromCGSize(self.window.frame.size) );
+    
+}
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+//    UINavigationController *nav = (UINavigationController *)viewController;
+//    if ([[nav.viewControllers objectAtIndex:0] respondsToSelector:@selector(reNew)]) {
+//        [[nav.viewControllers objectAtIndex:0] reNew];
+//    }
+    return YES;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

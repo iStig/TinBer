@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServiViewController : UIViewController
+@interface ServiViewController : CommonViewController
 
 @end

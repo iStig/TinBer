@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setLeftbuttonImage:@"IconBack"];
+    [self setTopTitle:@"用户协议"];
 }
 
 - (void)didReceiveMemoryWarning {

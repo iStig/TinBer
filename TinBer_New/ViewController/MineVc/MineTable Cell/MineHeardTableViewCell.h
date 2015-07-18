@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MineHeardTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *ImageHeard;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UIButton *btnQiandao;
+@property (weak, nonatomic) IBOutlet UIButton *btnHeard;
 
 @end

@@ -11,7 +11,7 @@
 
 @interface TabbarViewController()
 
-- (void)showAccessoryView:(BOOL)isShow;
+//- (void)showAccessoryView:(BOOL)isShow;
 
 @end
 
@@ -50,90 +50,36 @@
 - (void)viewDidLoad
 {
 
-//    for (UIView *view in [self.view subviews])
-//    {
-//        if ([view isKindOfClass:[UITabBar class]])
-//        {
-//            [view removeFromSuperview];
-//        }
-//        else if ([view isKindOfClass:[UIImageView class]])
-//        {
-//        
-//        }
-//        else 
-//        {
-////            view.frame = CGRectMake(0, 100, 320, 500);
-//        }
-//        view.backgroundColor = TTRedColor;
-//    }
+    for (UIView *view in [self.view subviews])
+    {
+        if ([view isKindOfClass:[UITabBar class]])
+        {
+            [view removeFromSuperview];
+        }
+        else if ([view isKindOfClass:[UIImageView class]])
+        {
+        
+        }
+        else 
+        {
+            view.frame = CGRectMake(0, 800, ScreenWhite, ScreenHeigth);
+        }
+    }
     float screenHeight = ScreenHeigth;
-    _customTabbar = [[CustomTabbarView alloc] initWithFrame:CGRectMake(0, screenHeight - 49, 320, 49)];
+    _customTabbar = [[CustomTabbarView alloc] initWithFrame:CGRectMake(0, screenHeight - 49, ScreenWhite, 49)];
     _customTabbar.delegate = self;
     _customTabbar.backgroundColor = TTWhiteColor;
     [self.view addSubview:_customTabbar];
-//    
-//    //Cover view
-//    CGRect frame = self.view.frame;
-//    frame.size.height -= self.tabBar.frame.size.height;
-//    _coverView = [[UIView alloc] initWithFrame:frame];
-//    [self.view addSubview:_coverView];
-//
-//    _accessoryView = [[UIImageView alloc] initWithFrame:CGRectZero];
-//    [_coverView addSubview:_accessoryView];
     
-    [self showAccessoryView:NO];
+
 }
 
-- (void)loadPreviewImage:(SInt32)index
-{
-    return;
-    UIImage *img = [UIImage imageNamed:[_accessoryContent objectAtIndex:index]];
-    if (img)
-    {
-        CGRect frame = CGRectZero;
-        frame.size = img.size;
-        _accessoryView.frame = frame;
-        _accessoryView.center = self.view.center;
-        _accessoryView.image = img;
-    }
-}
-
-- (void)setAccessoryContent:(NSArray *)accessoryContent
-{
-    if (!_accessoryContent)
-    {
-        _accessoryContent = [[NSMutableArray alloc] initWithCapacity:[accessoryContent count]];
-    }
-    
-    [_accessoryContent removeAllObjects];
-    if ([accessoryContent count])
-    {
-        [_accessoryContent addObjectsFromArray:accessoryContent];
-    }
-}
-
-- (void)showAccessoryView:(BOOL)isShow
-{
-    [_accessoryView setHidden:!isShow];
-    [_coverView setHidden:!isShow];
-}
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-}
-
-
-- (void)dealloc
-{
-    [_viewControllers release];
-    [_accessoryView release];
-    [_coverView release];
-    [_accessoryContent release];
-    [_customTabbar release];
-    [super dealloc];
 }
 
 #pragma mark -CustomTabbarView Method-
@@ -156,9 +102,9 @@
             }
         }
 
-        [self loadPreviewImage:curIndex];
+//        [self loadPreviewImage:curIndex];
         self.selectedIndex = curIndex;
-        [self showAccessoryView:NO];
+//        [self showAccessoryView:NO];
     }
 }
 

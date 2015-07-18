@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ForgetPassWordViewController : UIViewController
+@interface ForgetPassWordViewController : CommonViewController
 
 @end

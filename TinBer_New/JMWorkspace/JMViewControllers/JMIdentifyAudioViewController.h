@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JMRadioEventButtonDelegate.h"
+typedef void (^JMRadioEventBlock)(JMRadioEventType);
 @interface JMIdentifyAudioViewController : UIViewController
+- (instancetype)initWithPopIdentifyAudioViewController:(JMRadioEventBlock)aBlock;
 
 @end

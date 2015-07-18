@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef NS_ENUM (NSUInteger,JMRadioEventType){
+    JMRadioEventType_Sure,
+    JMRadioEventType_Cancle,
+    JMRadioEventType_Close,
+};
 
 @protocol JMRadioEventButtonDelegate <NSObject>
-
+@optional
+- (void)didPressRadioEventButton:(JMRadioEventType)type;
 @end

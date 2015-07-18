@@ -54,7 +54,9 @@
 }
 
 - (void)sure {
-    
+    if ([self.delegate respondsToSelector:@selector(didPressButtonEvent:)]&&self.delegate) {
+        [self.delegate didPressButtonEvent:JMShakeResultType_ShoppingCard];
+    }
 }
 
 @end

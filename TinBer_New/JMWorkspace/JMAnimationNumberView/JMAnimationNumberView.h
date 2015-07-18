@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface JMAnimationNumberView : UIView
-
-@end
+@property (nonatomic, copy) NSString *number;
++ (instancetype)layoutNumberView;
+@end;

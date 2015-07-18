@@ -23,7 +23,7 @@
 {
     NSMutableArray              *_items;
     SInt32                      _lastItemIndex;
-    id<CustomTabbarViewDelegate> _delegate;
+//    id<CustomTabbarViewDelegate> _delegate;
 }
 
 @property (nonatomic, assign) id<CustomTabbarViewDelegate> delegate;

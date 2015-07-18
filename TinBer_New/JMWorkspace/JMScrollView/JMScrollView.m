@@ -1,12 +1,4 @@
-//
-//  AdScrollView.m
-//  广告循环滚动效果
-//
-//  Created by QzydeMac on 14/12/20.
-//  Copyright (c) 2014年 Qzy. All rights reserved.
-//
-
-#import "AdScrollView.h"
+#import "JMScrollView.h"
 
 #define UISCREENWIDTH  self.bounds.size.width//广告的宽度
 #define UISCREENHEIGHT  self.bounds.size.height//广告的高度
@@ -16,7 +8,7 @@
 static CGFloat const chageImageTime = 3.0;
 static NSUInteger currentImage = 1;//记录中间图片的下标,开始总是为1
 
-@interface AdScrollView ()
+@interface JMScrollView ()
 
 {
     //广告的label
@@ -41,7 +33,16 @@ static NSUInteger currentImage = 1;//记录中间图片的下标,开始总是为
 
 @end
 
-@implementation AdScrollView
+@implementation JMScrollView
+
++ (instancetype)layoutScrollView:(CGRect)rect WithImages:(NSArray *)images  {
+    JMScrollView * scrollView = [[JMScrollView alloc] initWithFrame:rect];
+    scrollView.imageNameArray = images;
+    scrollView.PageControlShowStyle = UIPageControlShowStyleCenter;
+    scrollView.pageControl.pageIndicatorTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+    scrollView.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    return scrollView;
+}
 
 #pragma mark - 自由指定广告所占的frame
 - (instancetype)initWithFrame:(CGRect)frame
@@ -215,8 +216,10 @@ static NSUInteger currentImage = 1;//记录中间图片的下标,开始总是为
     _isTimeUp = NO;
 }
 
+- (void)dealloc {
+    [_moveTime invalidate];
+    _moveTime = nil;
+}
+
 @end
 
-// 版权属于原作者
-// http://code4app.com (cn) http://code4app.net (en)
-// 发布代码于最专业的源码分享网站: Code4App.com 

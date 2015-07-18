@@ -16,6 +16,7 @@
 @property (nonatomic,retain)UIImage *navBarBgImage;
 
 - (UIBarButtonItem *)createNavBarBtn:(NSString *)imageName action:(SEL)selector;
+- (UIBarButtonItem *)createNavBarBtnWithTitle:(NSString *)Title action:(SEL)selector;
 - (void)setTopTitle:(NSString *)strTitle ;
 -(void)setLeftbuttonImage:(NSString* )strImage;
 

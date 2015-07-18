@@ -12,6 +12,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [[_ImagePhoto layer]setCornerRadius:35];
+    [[_ImagePhoto layer]setMasksToBounds:YES];
+    [[_ImagePhoto layer]setBorderColor:[[UIColor clearColor] CGColor]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

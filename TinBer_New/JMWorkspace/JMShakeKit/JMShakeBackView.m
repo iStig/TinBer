@@ -9,7 +9,7 @@
 #import "JMShakeBackView.h"
 #define kAnimationDuration 0.3f
 
-@interface JMShakeBackView()
+@interface JMShakeBackView()<JMButtonEventDelegate>
 @property (nonatomic, assign) BOOL isShake;
 @property (nonatomic, strong) JMShakeInfoView *infoView;
 @property (nonatomic, strong) JMShakeGoldCoins *goldView;
@@ -18,7 +18,7 @@
 @end
 @implementation JMShakeBackView
 
-#pragma lifecycle
+#pragma mark lifecycle
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -34,7 +34,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma private
+#pragma mark private
 - (void)addInfoView {
     self.infoView = [[JMShakeInfoView alloc] initWithFrame:CGRectMake(0, 0, 280, 280)];
     self.infoView.center = self.center;
@@ -43,43 +43,79 @@
 
 
 - (void)addGoldCoinsView {
+    if (self.goldView) {
+        self.goldView = nil;
+    }
+    
     self.goldView = [[JMShakeGoldCoins alloc] initWithFrame:CGRectMake(0, 0, 280, 280)];
     self.goldView.center = self.center;
+    self.goldView.delegate = self;
     [self addSubview:self.goldView];
 }
 
 - (void)addNotWinningView {
+    if (self.notWinView) {
+        self.notWinView = nil;
+    }
+    
     self.notWinView = [[JMShakeNotWinning alloc] initWithFrame:CGRectMake(0, 0, 280, 280)];
     self.notWinView.center = self.center;
+    self.notWinView.delegate = self;
     [self addSubview:self.notWinView];
 }
 
 - (void)addShoppingCardView {
+    if (self.shopCardView) {
+        self.shopCardView = nil;
+    }
     self.shopCardView = [[JMShakeShoppingCard alloc] initWithFrame:CGRectMake(0, 0, 280, 280)];
     self.shopCardView.center = self.center;
+    self.shopCardView.delegate = self;
     [self addSubview:self.shopCardView];
 }
 
-#pragma UIEvent
+#pragma mark JMButtonEventDelegate
+- (void)didPressButtonEvent:(JMShakeResultType)type {
+    NSLog(@"dismiss :%@",[@(type) stringValue]);
+    [self dismiss];
+    switch (type) {
+        case JMShakeResultType_GoldCoins:
+
+            break;
+        case JMShakeResultType_ShoppingCard:
+
+            break;
+        case JMShakeResultType_NotWinning:
+
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+
+#pragma mark UIEvent
 - (void)shake:(NSNotification *)sender {
-    NSLog(@"%@",sender.object);
+//    NSLog(@"%@",sender.object);
     if (_isShake) {
         [self.infoView dismiss];
         _isShake = NO;
         
-//        JMShakeResultType type = arc4random()%4;
-        JMShakeResultType type = 2;
+        JMShakeResultType type = arc4random()%3;
+        NSLog(@"pop :%@",[@(type) stringValue]);
+
         switch (type) {
             case JMShakeResultType_GoldCoins:
                 [self addGoldCoinsView];
                 break;
             case JMShakeResultType_ShoppingCard:
-                [self addNotWinningView];
-                break;
-            case JMShakeResultType_NotWinning:
                 [self addShoppingCardView];
                 break;
-                
+            case JMShakeResultType_NotWinning:
+                [self addNotWinningView];
+                break;
             default:
                 break;
         }
@@ -93,7 +129,7 @@
     }
 }
 
-#pragma public
+#pragma mark public
 - (void)dismiss {
     [UIView animateWithDuration:kAnimationDuration animations:^{
         self.backgroundColor = [UIColor clearColor];

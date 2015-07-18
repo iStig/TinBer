@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActiviesHomeViewController : UIViewController
+@interface ActiviesHomeViewController : CommonViewController
 
 @end

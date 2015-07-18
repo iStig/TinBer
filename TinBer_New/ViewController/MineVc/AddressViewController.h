@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddressViewController : UIViewController
+@interface AddressViewController : CommonViewController
+
+@property (nonatomic , retain) NSString * strtitle;
+@property (nonatomic , retain) NSString * strReturn;
 
 @end

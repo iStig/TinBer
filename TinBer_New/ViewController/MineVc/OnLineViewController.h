@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OnLineViewController : UIViewController
+@interface OnLineViewController : CommonViewController
 
 @end

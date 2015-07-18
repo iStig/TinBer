@@ -42,7 +42,7 @@ static  NSString *const scrollSlidingAnimationKey = @"scrollSlidingAnimation";
     //transformRotationInside.speed = 2;
     [self.insideCycle.layer addAnimation:transformRotationInside forKey:rotationInsideAnimationKey];
     
-    //旋转外侧侧大圆  逆时针
+    //旋转外侧大圆  逆时针
     CABasicAnimation *transformRotationOutsideCounter = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     transformRotationOutsideCounter.byValue = [NSNumber numberWithDouble:(-2*M_PI)];
     transformRotationOutsideCounter.duration = kCycleAnimationTimeInteral;
@@ -56,16 +56,15 @@ static  NSString *const scrollSlidingAnimationKey = @"scrollSlidingAnimation";
     transformRotationOutside.repeatCount = MAXFLOAT;
     [self.outsideClockwise.layer addAnimation:transformRotationOutside forKey:rotationOutsideAnimationKey];
     
-    
-    NSLog(@"%@",[NSNumber numberWithFloat:self.waveImg.layer.position.x]);
+    //波浪动画  重复连续显示
+//    NSLog(@"%@",[NSNumber numberWithFloat:self.waveImg.layer.position.x]);
     CAKeyframeAnimation * moveAction = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-    moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-146],[NSNumber numberWithFloat:self.waveImg.layer.position.x],nil];
+    moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-146],[NSNumber numberWithFloat:self.waveImg.layer.position.x],nil];//针动画 真难调
     moveAction.duration = 8;
     //moveAction.autoreverses = YES;
     moveAction.repeatCount = MAXFLOAT;
     [self.waveImg.layer addAnimation:moveAction forKey:scrollSlidingAnimationKey];
 
-    
 }
 
 @end

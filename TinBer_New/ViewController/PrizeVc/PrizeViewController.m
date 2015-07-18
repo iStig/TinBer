@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTopTitle:@"兑换中心"];
     // Do any additional setup after loading the view.
 }
 

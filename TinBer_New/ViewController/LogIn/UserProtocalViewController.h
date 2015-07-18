@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserProtocalViewController : UIViewController
+@interface UserProtocalViewController : CommonViewController
 
 @end

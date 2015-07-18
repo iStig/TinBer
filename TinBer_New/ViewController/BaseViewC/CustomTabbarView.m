@@ -8,10 +8,10 @@
 
 #import "CustomTabbarView.h"
 
-#define TAB_ITEM_COUNT 4
+#define TAB_ITEM_COUNT 5
 #define TAB_ITEM_WIDTH (self.frame.size.width / TAB_ITEM_COUNT)
 
-#define TAB_IMG_FRAME               CGRectMake(0.0, 0, 80, 49)
+#define TAB_IMG_FRAME               CGRectMake(0.0, 0, TAB_ITEM_WIDTH, 49)
 
 @implementation TabImage
 
@@ -33,7 +33,6 @@
         itemVImg.image = [UIImage imageNamed:strNormalImage];
         itemVImg.highlightedImage = [UIImage imageNamed:strSelectedImage];
         [self addSubview:itemVImg];
-        [itemVImg release];
     }
     return self;
 }
@@ -59,23 +58,11 @@
     if (self) {
         self.backgroundColor = TTClearColor;
         
-        UIView * viewBg = [[UIView alloc] initWithFrame:self.bounds];
-        viewBg.alpha = 0.5;
-        viewBg.backgroundColor = TTRGBColor(254, 254, 254);
-        [self addSubview:viewBg];
-        [viewBg release];
-
-        UIView * line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWhite, 1)];
-        line.backgroundColor = TTRGBColor(190, 190, 190);
-        [self addSubview:line];
-        [line release];
-        
         _items = [[NSMutableArray alloc] initWithCapacity:5];
         for (int i = 0; i < TAB_ITEM_COUNT; i++) {
-            CGRect frame = CGRectOffset(TAB_IMG_FRAME, 320/TAB_ITEM_COUNT *i, 0);
+            CGRect frame = CGRectOffset(TAB_IMG_FRAME, ScreenWhite/TAB_ITEM_COUNT *i, 0);
             TabImage *tabImg = [[TabImage alloc] initWithFrame:frame index:i];
             [self addSubview:tabImg];
-            [tabImg release];
             [_items addObject:tabImg];
         }
         _lastItemIndex = -1;
@@ -165,11 +152,5 @@
     // Drawing code
 }
 */
-
-- (void)dealloc
-{
-    [_items release];
-    [super dealloc];
-}
 
 @end

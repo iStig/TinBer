@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RevisePasswordViewController : UIViewController
+@interface RevisePasswordViewController : CommonViewController
 
 @end

@@ -7,9 +7,13 @@
 //
 
 #import "ActiviesHomeViewController.h"
+#import "JMScrollView.h"
+#import "JMAnimationNumberView.h"
 
-@interface ActiviesHomeViewController ()
 
+@interface ActiviesHomeViewController()
+@property (nonatomic, strong) JMAnimationNumberView  *animationNumber;
+@property (nonatomic, assign) NSInteger number;
 @end
 
 @implementation ActiviesHomeViewController
@@ -17,6 +21,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self createScrollView];
+}
+- (void)createScrollView {
+    NSArray *imageNameArray = @[@"image0.png",@"image1.png",@"image2.png",@"image3.png",@"image2.png"];
+    JMScrollView *v = [JMScrollView layoutScrollView:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150) WithImages:imageNameArray];
+    [self.view addSubview:v];
+    
+    
+    _number = 5;
+    _animationNumber = [JMAnimationNumberView layoutNumberView];
+    _animationNumber.number = [@(_number) stringValue];
+    _animationNumber.center = CGPointMake(self.view.center.x, CGRectGetMaxY(_animationNumber.frame)+150);
+    [self.view addSubview:_animationNumber];
+    
+    
+    [NSTimer scheduledTimerWithTimeInterval:3.f target:self selector:@selector(changeValue) userInfo:nil repeats:YES];
+}
+
+- (void)changeValue {
+    _number = _number*25;
+    _animationNumber.number = [@(_number) stringValue];
 }
 
 - (void)didReceiveMemoryWarning {

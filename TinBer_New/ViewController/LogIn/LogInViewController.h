@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogInViewController : UIViewController
+@interface LogInViewController : CommonViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblseparatorPassword;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblseparatorUser;
+@property (weak, nonatomic) IBOutlet UITextField *TextFildUser;
+@property (weak, nonatomic) IBOutlet UITextField *TextFildPassword;
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditNameViewController : UIViewController
+@interface EditNameViewController : CommonViewController
 
 @end

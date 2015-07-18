@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrizeViewController : UIViewController
+@interface PrizeViewController : CommonViewController
 
 @end

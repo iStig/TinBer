@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonalHeardTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *ImagePhoto;
+@property (weak, nonatomic) IBOutlet UIButton *btnEdit;
 
 @end
