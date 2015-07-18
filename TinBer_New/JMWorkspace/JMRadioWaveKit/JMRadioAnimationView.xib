@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JMRadioAnimationView">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jm_radio_wave_background" translatesAutoresizingMaskIntoConstraints="NO" id="pLw-hM-hya">
+                    <rect key="frame" x="33" y="33" width="163" height="163"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="163" id="3fe-nN-fIr"/>
+                        <constraint firstAttribute="height" constant="163" id="BDm-oS-aOc"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jm_radio_inside_cycle" translatesAutoresizingMaskIntoConstraints="NO" id="jc0-uP-VFV">
+                    <rect key="frame" x="21" y="21" width="187" height="187"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="187" id="UU3-aU-kf9"/>
+                        <constraint firstAttribute="width" constant="187" id="tsX-SR-skW"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jm_radio_outside_cycle" translatesAutoresizingMaskIntoConstraints="NO" id="9j2-GC-hax">
+                    <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="ckP-OC-6rf"/>
+                        <constraint firstAttribute="height" constant="230" id="utp-lz-j6I"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jm_radio_outside_cycle" translatesAutoresizingMaskIntoConstraints="NO" id="tck-ls-WGw" userLabel="jm_radio_outside_counter_cycle">
+                    <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="i5H-ni-gTX"/>
+                        <constraint firstAttribute="height" constant="230" id="sDF-eB-doA"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRA-5m-EiY" userLabel="waveView">
+                    <rect key="frame" x="33" y="33" width="163" height="163"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="163" id="5WL-1n-tc2"/>
+                        <constraint firstAttribute="height" constant="163" id="oYg-b5-hpf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="pLw-hM-hya" secondAttribute="centerX" id="7jU-xs-9n3"/>
+                <constraint firstAttribute="centerY" secondItem="pLw-hM-hya" secondAttribute="centerY" id="Ibc-un-fqu"/>
+                <constraint firstItem="hRA-5m-EiY" firstAttribute="top" secondItem="pLw-hM-hya" secondAttribute="top" id="MWE-5j-Pic"/>
+                <constraint firstItem="hRA-5m-EiY" firstAttribute="leading" secondItem="pLw-hM-hya" secondAttribute="leading" id="XVR-ZK-E0s"/>
+                <constraint firstAttribute="centerX" secondItem="jc0-uP-VFV" secondAttribute="centerX" id="YM9-9e-RJG"/>
+                <constraint firstAttribute="centerY" secondItem="tck-ls-WGw" secondAttribute="centerY" id="cND-lT-yaQ"/>
+                <constraint firstAttribute="centerX" secondItem="tck-ls-WGw" secondAttribute="centerX" id="ghW-bV-Ug8"/>
+                <constraint firstAttribute="centerX" secondItem="9j2-GC-hax" secondAttribute="centerX" id="m1e-Ak-TuV"/>
+                <constraint firstAttribute="centerY" secondItem="jc0-uP-VFV" secondAttribute="centerY" id="r6E-Gd-djT"/>
+                <constraint firstAttribute="centerY" secondItem="9j2-GC-hax" secondAttribute="centerY" id="znC-tE-pYo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="insideCycle" destination="jc0-uP-VFV" id="AQ5-l9-l4x"/>
+                <outlet property="outsideClockwise" destination="9j2-GC-hax" id="NUm-wk-Yov"/>
+                <outlet property="outsideCounterClockwise" destination="tck-ls-WGw" id="AgE-0X-Adk"/>
+                <outlet property="waveView" destination="hRA-5m-EiY" id="RL6-Wk-uNF"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="jm_radio_inside_cycle" width="285" height="285"/>
+        <image name="jm_radio_outside_cycle" width="351" height="351"/>
+        <image name="jm_radio_wave_background" width="246" height="246"/>
+    </resources>
+</document>

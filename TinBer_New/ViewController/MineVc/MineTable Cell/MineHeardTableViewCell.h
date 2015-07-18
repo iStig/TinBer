@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MineHeardTableViewCell.h
 //  TinBer_New
 //
 //  Created by shentingting on 15/7/6.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MineHeardTableViewCell : UITableViewCell
 
 @end
-
