@@ -86,12 +86,14 @@
 		621603B51B4F9D9F000C3380 /* JMShakeShoppingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 621603AD1B4F9D9F000C3380 /* JMShakeShoppingCard.m */; };
 		621603B61B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 621603AF1B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m */; };
 		6229B88C1B5299C900AF27A6 /* JMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6229B88A1B5299C900AF27A6 /* JMDataModel.xcdatamodeld */; };
+		629C641C1B59DF6B00A486D5 /* JMNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */; };
 		629EAEAD1B51636400301DB8 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 629EAEAC1B51636400301DB8 /* JMCoreDataManager.m */; };
 		629EAEBE1B5264BE00301DB8 /* JMRadioEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 629EAEBD1B5264BE00301DB8 /* JMRadioEventButton.m */; };
 		629EAEC01B5264E600301DB8 /* JMRadioEventButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629EAEBF1B5264E600301DB8 /* JMRadioEventButton.xib */; };
 		62A2E4471B501D96007EF3D3 /* JMRadioAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A2E4451B501D96007EF3D3 /* JMRadioAnimationView.m */; };
 		62A2E4481B501D96007EF3D3 /* JMRadioAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A2E4461B501D96007EF3D3 /* JMRadioAnimationView.xib */; };
 		62A2E44C1B50C8CC007EF3D3 /* JMIdentifyAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A2E44B1B50C8CC007EF3D3 /* JMIdentifyAudioViewController.m */; };
+		62EF6E9B1B59F0CE002117EA /* AppDelegate+JMNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EF6E9A1B59F0CE002117EA /* AppDelegate+JMNotificationCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +227,8 @@
 		621603AF1B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JMGlobalShake.m"; sourceTree = "<group>"; };
 		621603B71B4F9E2B000C3380 /* JMButtonEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMButtonEventDelegate.h; sourceTree = "<group>"; };
 		6229B88B1B5299C900AF27A6 /* JMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JMDataModel.xcdatamodel; sourceTree = "<group>"; };
+		629C641A1B59DF6B00A486D5 /* JMNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNotificationCenter.h; sourceTree = "<group>"; };
+		629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNotificationCenter.m; sourceTree = "<group>"; };
 		629EAEAB1B51636400301DB8 /* JMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
 		629EAEAC1B51636400301DB8 /* JMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCoreDataManager.m; sourceTree = "<group>"; };
 		629EAEBC1B5264BE00301DB8 /* JMRadioEventButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRadioEventButton.h; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 		62A2E4461B501D96007EF3D3 /* JMRadioAnimationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMRadioAnimationView.xib; sourceTree = "<group>"; };
 		62A2E44A1B50C8CC007EF3D3 /* JMIdentifyAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMIdentifyAudioViewController.h; sourceTree = "<group>"; };
 		62A2E44B1B50C8CC007EF3D3 /* JMIdentifyAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMIdentifyAudioViewController.m; sourceTree = "<group>"; };
+		62EF6E991B59F0CE002117EA /* AppDelegate+JMNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JMNotificationCenter.h"; sourceTree = "<group>"; };
+		62EF6E9A1B59F0CE002117EA /* AppDelegate+JMNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JMNotificationCenter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +558,7 @@
 		620E124F1B4F5133002B39D2 /* JMWorkspace */ = {
 			isa = PBXGroup;
 			children = (
+				629C64191B59DF1400A486D5 /* JMNotificationCenter */,
 				6202304C1B56C89200097D4F /* JMAnimationNumberView */,
 				6202303A1B56BE7700097D4F /* JMScrollView */,
 				629EAEAA1B51620000301DB8 /* JMCoreData */,
@@ -583,6 +590,17 @@
 				621603B71B4F9E2B000C3380 /* JMButtonEventDelegate.h */,
 			);
 			path = JMShakeKit;
+			sourceTree = "<group>";
+		};
+		629C64191B59DF1400A486D5 /* JMNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				62EF6E991B59F0CE002117EA /* AppDelegate+JMNotificationCenter.h */,
+				62EF6E9A1B59F0CE002117EA /* AppDelegate+JMNotificationCenter.m */,
+				629C641A1B59DF6B00A486D5 /* JMNotificationCenter.h */,
+				629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */,
+			);
+			path = JMNotificationCenter;
 			sourceTree = "<group>";
 		};
 		629EAEAA1B51620000301DB8 /* JMCoreData */ = {
@@ -778,8 +796,10 @@
 				13EE5FB71B4BF7AB00F95C46 /* AddressViewController.m in Sources */,
 				13CD35211B4A8FAD00461000 /* TabbarViewController.m in Sources */,
 				6202304F1B56C92F00097D4F /* ADTickerLabel.m in Sources */,
+				629C641C1B59DF6B00A486D5 /* JMNotificationCenter.m in Sources */,
 				13CD353B1B4A992C00461000 /* ListenViewController.m in Sources */,
 				13CD352B1B4A8FD300461000 /* TTStrings.m in Sources */,
+				62EF6E9B1B59F0CE002117EA /* AppDelegate+JMNotificationCenter.m in Sources */,
 				13CD35411B4A994700461000 /* MineViewController.m in Sources */,
 				13EE5FB41B4BF25200F95C46 /* RevisePasswordViewController.m in Sources */,
 				13CD35831B4B75C200461000 /* OnLineViewController.m in Sources */,

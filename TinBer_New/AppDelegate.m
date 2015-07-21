@@ -13,6 +13,7 @@
 #import "ListenViewController.h"
 #import "PrizeViewController.h"
 #import "MineViewController.h"
+#import "AppDelegate+JMNotificationCenter.h"
 
 @interface AppDelegate ()
 
@@ -27,11 +28,28 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    [self registerLocalNotificationPush];
     [self mainViewController];
+    
+    UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+　　
+    if (localNotif) {
+        NSLog(@"Recieved Notification %@",localNotif);
+        NSDictionary* infoDic = localNotif.userInfo;
+        NSLog(@"userInfo description=%@",[infoDic description]);
+    }
     
     NSLog(@"%@",NSStringFromCGSize(self.window.frame.size));
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if(notification) {
+        NSLog(@"Recieved Notification %@",notification);
+        NSDictionary* infoDic = notification.userInfo;
+        NSLog(@"userInfo description=%@",[infoDic description]);
+    }
 }
 
 - (void)mainViewController {
