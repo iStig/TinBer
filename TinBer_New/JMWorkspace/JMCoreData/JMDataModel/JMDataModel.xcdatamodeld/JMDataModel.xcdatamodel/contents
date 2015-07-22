@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+    <entity name="FMRadioChannel" representedClassName="FMRadioChannel" syncable="YES">
+        <attribute name="radioID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FMRadioEvent" representedClassName="FMRadioEvent" syncable="YES">
+        <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offlineDateTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="FMRadioPusher" representedClassName="FMRadioPusher" syncable="YES">
+        <attribute name="pushID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushStartTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="FMRadioReminder" representedClassName="FMRadioReminder" syncable="YES">
+        <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="radioName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="radioNumber" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FMRadioPusher" positionX="-27" positionY="18" width="128" height="75"/>
+        <element name="FMRadioEvent" positionX="18" positionY="63" width="128" height="90"/>
+        <element name="FMRadioChannel" positionX="54" positionY="99" width="128" height="60"/>
+        <element name="FMRadioReminder" positionX="18" positionY="63" width="128" height="105"/>
+    </elements>
 </model>

@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>60FE11C1-4390-45E6-9AB6-859837C7FFDE</string>
+	<string>B7398C64-900E-4A5E-9420-055F687934B7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TinBer_New</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1932FBAA3999074EECF2D0EB06361E71B7A05BFC</key>
 		<string>github.com:iStig/TinBer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TinBer_New.xcodeproj/project.xcworkspace</string>
+	<string>TinBer_New.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1932FBAA3999074EECF2D0EB06361E71B7A05BFC</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>1932FBAA3999074EECF2D0EB06361E71B7A05BFC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>TinBer</string>
+			<string>TinBer_New%20project</string>
 		</dict>
 	</array>
 </dict>

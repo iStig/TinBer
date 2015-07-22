@@ -86,6 +86,10 @@
 		621603B51B4F9D9F000C3380 /* JMShakeShoppingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 621603AD1B4F9D9F000C3380 /* JMShakeShoppingCard.m */; };
 		621603B61B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 621603AF1B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m */; };
 		6229B88C1B5299C900AF27A6 /* JMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6229B88A1B5299C900AF27A6 /* JMDataModel.xcdatamodeld */; };
+		625159C81B6000F700E8248C /* FMRadioChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C11B6000F700E8248C /* FMRadioChannel.m */; };
+		625159C91B6000F700E8248C /* FMRadioEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C31B6000F700E8248C /* FMRadioEvent.m */; };
+		625159CA1B6000F700E8248C /* FMRadioPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C51B6000F700E8248C /* FMRadioPusher.m */; };
+		625159CB1B6000F700E8248C /* FMRadioReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C71B6000F700E8248C /* FMRadioReminder.m */; };
 		629C641C1B59DF6B00A486D5 /* JMNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */; };
 		629EAEAD1B51636400301DB8 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 629EAEAC1B51636400301DB8 /* JMCoreDataManager.m */; };
 		629EAEBE1B5264BE00301DB8 /* JMRadioEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 629EAEBD1B5264BE00301DB8 /* JMRadioEventButton.m */; };
@@ -227,6 +231,14 @@
 		621603AF1B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JMGlobalShake.m"; sourceTree = "<group>"; };
 		621603B71B4F9E2B000C3380 /* JMButtonEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMButtonEventDelegate.h; sourceTree = "<group>"; };
 		6229B88B1B5299C900AF27A6 /* JMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JMDataModel.xcdatamodel; sourceTree = "<group>"; };
+		625159C01B6000F700E8248C /* FMRadioChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRadioChannel.h; sourceTree = "<group>"; };
+		625159C11B6000F700E8248C /* FMRadioChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRadioChannel.m; sourceTree = "<group>"; };
+		625159C21B6000F700E8248C /* FMRadioEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRadioEvent.h; sourceTree = "<group>"; };
+		625159C31B6000F700E8248C /* FMRadioEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRadioEvent.m; sourceTree = "<group>"; };
+		625159C41B6000F700E8248C /* FMRadioPusher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRadioPusher.h; sourceTree = "<group>"; };
+		625159C51B6000F700E8248C /* FMRadioPusher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRadioPusher.m; sourceTree = "<group>"; };
+		625159C61B6000F700E8248C /* FMRadioReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRadioReminder.h; sourceTree = "<group>"; };
+		625159C71B6000F700E8248C /* FMRadioReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRadioReminder.m; sourceTree = "<group>"; };
 		629C641A1B59DF6B00A486D5 /* JMNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNotificationCenter.h; sourceTree = "<group>"; };
 		629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNotificationCenter.m; sourceTree = "<group>"; };
 		629EAEAB1B51636400301DB8 /* JMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
@@ -616,6 +628,14 @@
 		629EAEC21B528E1500301DB8 /* JMDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				625159C01B6000F700E8248C /* FMRadioChannel.h */,
+				625159C11B6000F700E8248C /* FMRadioChannel.m */,
+				625159C21B6000F700E8248C /* FMRadioEvent.h */,
+				625159C31B6000F700E8248C /* FMRadioEvent.m */,
+				625159C41B6000F700E8248C /* FMRadioPusher.h */,
+				625159C51B6000F700E8248C /* FMRadioPusher.m */,
+				625159C61B6000F700E8248C /* FMRadioReminder.h */,
+				625159C71B6000F700E8248C /* FMRadioReminder.m */,
 				6229B88A1B5299C900AF27A6 /* JMDataModel.xcdatamodeld */,
 			);
 			path = JMDataModel;
@@ -793,13 +813,16 @@
 				621603B01B4F9D9F000C3380 /* JMShakeBackView.m in Sources */,
 				13CD35441B4A9BFB00461000 /* CommonViewController.m in Sources */,
 				6229B88C1B5299C900AF27A6 /* JMDataModel.xcdatamodeld in Sources */,
+				625159C91B6000F700E8248C /* FMRadioEvent.m in Sources */,
 				13EE5FB71B4BF7AB00F95C46 /* AddressViewController.m in Sources */,
 				13CD35211B4A8FAD00461000 /* TabbarViewController.m in Sources */,
+				625159CB1B6000F700E8248C /* FMRadioReminder.m in Sources */,
 				6202304F1B56C92F00097D4F /* ADTickerLabel.m in Sources */,
 				629C641C1B59DF6B00A486D5 /* JMNotificationCenter.m in Sources */,
 				13CD353B1B4A992C00461000 /* ListenViewController.m in Sources */,
 				13CD352B1B4A8FD300461000 /* TTStrings.m in Sources */,
 				62EF6E9B1B59F0CE002117EA /* AppDelegate+JMNotificationCenter.m in Sources */,
+				625159CA1B6000F700E8248C /* FMRadioPusher.m in Sources */,
 				13CD35411B4A994700461000 /* MineViewController.m in Sources */,
 				13EE5FB41B4BF25200F95C46 /* RevisePasswordViewController.m in Sources */,
 				13CD35831B4B75C200461000 /* OnLineViewController.m in Sources */,
@@ -824,6 +847,7 @@
 				13CD35291B4A8FD300461000 /* TTHeaders.m in Sources */,
 				13EE5FBE1B4C1AD800F95C46 /* LogInViewController.m in Sources */,
 				13CD34F71B4A8CC500461000 /* main.m in Sources */,
+				625159C81B6000F700E8248C /* FMRadioChannel.m in Sources */,
 				629EAEAD1B51636400301DB8 /* JMCoreDataManager.m in Sources */,
 				62A2E44C1B50C8CC007EF3D3 /* JMIdentifyAudioViewController.m in Sources */,
 				13CD35201B4A8FAD00461000 /* CustomTabbarView.m in Sources */,
