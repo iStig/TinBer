@@ -7,7 +7,7 @@
 //
 
 #import "PrizeViewController.h"
-
+#import "JMNotificationCenter.h"
 @interface PrizeViewController ()
 
 @end
@@ -18,7 +18,18 @@
     [super viewDidLoad];
     [self setTopTitle:@"兑换中心"];
     // Do any additional setup after loading the view.
+    [self addLocalNotification];
 }
+
+- (void)addLocalNotification {
+    [[JMNotificationCenter sharedInstance] addLocalNotificationWithFireDate:[NSDate date] activityId:1 activityTitle:@"hello"];
+}
+
+- (void)removeLocalNotification {
+    [[JMNotificationCenter sharedInstance] removeNotificationWithActivityID:1];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

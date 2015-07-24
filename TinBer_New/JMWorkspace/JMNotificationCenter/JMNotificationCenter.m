@@ -12,7 +12,7 @@
 
 + (instancetype)sharedInstance {
     static JMNotificationCenter *instance = nil;
-    dispatch_once_t once;
+    static dispatch_once_t once;
     dispatch_once(&once, ^{
         instance = [[self alloc] init];
     });

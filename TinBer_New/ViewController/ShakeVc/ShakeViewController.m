@@ -8,9 +8,7 @@
 
 #import "ShakeViewController.h"
 #import "JMShakeBackView.h"
-
 #import "JMCoreDataManager.h"
-#import "JMNotificationCenter.h"
 
 @interface ShakeViewController ()
 @property (nonatomic, strong) UIButton *attendImmediately;
@@ -37,7 +35,6 @@
 }
 
 - (void)attend:(UIButton *)sender {
-    [[JMNotificationCenter sharedInstance] removeNotificationWithActivityID:1];
     if (self.backView) {
         self.backView = nil;
     }

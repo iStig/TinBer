@@ -9,7 +9,6 @@
 #import "ActiviesHomeViewController.h"
 #import "JMScrollView.h"
 #import "JMAnimationNumberView.h"
-#import "JMNotificationCenter.h"
 
 @interface ActiviesHomeViewController()
 @property (nonatomic, strong) JMAnimationNumberView  *animationNumber;
@@ -22,12 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createScrollView];
-    [self addLocalNotification];
 }
 
-- (void)addLocalNotification {
-    [[JMNotificationCenter sharedInstance] addLocalNotificationWithFireDate:[NSDate date] activityId:1 activityTitle:@"hello"];
-}
+
 
 - (void)createScrollView {
     NSArray *imageNameArray = @[@"image0.png",@"image1.png",@"image2.png",@"image3.png",@"image2.png"];
