@@ -2,26 +2,30 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="FMRadioChannel" representedClassName="FMRadioChannel" syncable="YES">
         <attribute name="radioID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fmRadioEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FMRadioEvent" inverseName="fmRadioChannel" inverseEntity="FMRadioEvent" syncable="YES"/>
     </entity>
     <entity name="FMRadioEvent" representedClassName="FMRadioEvent" syncable="YES">
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="offlineDateTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="fmRadioChannel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FMRadioChannel" inverseName="fmRadioEvents" inverseEntity="FMRadioChannel" syncable="YES"/>
     </entity>
     <entity name="FMRadioPusher" representedClassName="FMRadioPusher" syncable="YES">
         <attribute name="pushID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pushStartTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="fmRadioReminder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FMRadioReminder" inverseName="fmRadioPushers" inverseEntity="FMRadioReminder" syncable="YES"/>
     </entity>
     <entity name="FMRadioReminder" representedClassName="FMRadioReminder" syncable="YES">
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="radioName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="radioNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fmRadioPushers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FMRadioPusher" inverseName="fmRadioReminder" inverseEntity="FMRadioPusher" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FMRadioPusher" positionX="-27" positionY="18" width="128" height="75"/>
-        <element name="FMRadioEvent" positionX="18" positionY="63" width="128" height="90"/>
-        <element name="FMRadioChannel" positionX="54" positionY="99" width="128" height="60"/>
-        <element name="FMRadioReminder" positionX="18" positionY="63" width="128" height="105"/>
+        <element name="FMRadioChannel" positionX="-11781" positionY="-226" width="128" height="73"/>
+        <element name="FMRadioEvent" positionX="-11952" positionY="-243" width="128" height="103"/>
+        <element name="FMRadioPusher" positionX="-12132" positionY="-324" width="128" height="88"/>
+        <element name="FMRadioReminder" positionX="-12296" positionY="-324" width="128" height="118"/>
     </elements>
 </model>

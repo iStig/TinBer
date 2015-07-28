@@ -632,10 +632,10 @@
 				625159C11B6000F700E8248C /* FMRadioChannel.m */,
 				625159C21B6000F700E8248C /* FMRadioEvent.h */,
 				625159C31B6000F700E8248C /* FMRadioEvent.m */,
-				625159C41B6000F700E8248C /* FMRadioPusher.h */,
-				625159C51B6000F700E8248C /* FMRadioPusher.m */,
 				625159C61B6000F700E8248C /* FMRadioReminder.h */,
 				625159C71B6000F700E8248C /* FMRadioReminder.m */,
+				625159C41B6000F700E8248C /* FMRadioPusher.h */,
+				625159C51B6000F700E8248C /* FMRadioPusher.m */,
 				6229B88A1B5299C900AF27A6 /* JMDataModel.xcdatamodeld */,
 			);
 			path = JMDataModel;

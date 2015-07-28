@@ -2,6 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioReminder.h">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioReminder.m">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioChannel.h">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioChannel.m">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioPusher.h">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioPusher.m">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioEvent.h">
+   </FileRef>
+   <FileRef
+      location = "group:../TinBer_New/JMWorkspace/JMCoreData/JMDataModel/FMRadioEvent.m">
+   </FileRef>
+   <FileRef
       location = "self:TinBer_New.xcodeproj">
    </FileRef>
 </Workspace>

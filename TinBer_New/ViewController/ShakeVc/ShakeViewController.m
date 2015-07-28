@@ -22,7 +22,6 @@
     // Do any additional setup after loading the view.
     [self setTopTitle:@"摇一摇"];
     [self setupAttendButton];
-    [JMCoreDataManager sharedCoreDataManager];
 }
 
 - (void)setupAttendButton {
