@@ -21,11 +21,11 @@
 
 @end
 
-@interface FMRadioChannel (CoreDataGeneratedAccessors)
-
-- (void)addFmRadioEventsObject:(FMRadioEvent *)value;
-- (void)removeFmRadioEventsObject:(FMRadioEvent *)value;
-- (void)addFmRadioEvents:(NSSet *)values;
-- (void)removeFmRadioEvents:(NSSet *)values;
-
-@end
+//@interface FMRadioChannel (CoreDataGeneratedAccessors)
+//
+//- (void)addFmRadioEventsObject:(FMRadioEvent *)value;
+//- (void)removeFmRadioEventsObject:(FMRadioEvent *)value;
+//- (void)addFmRadioEvents:(NSSet *)values;
+//- (void)removeFmRadioEvents:(NSSet *)values;
+//
+//@end

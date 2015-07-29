@@ -109,14 +109,14 @@ static NSString *kTableViewCellIdentifier = @"TableViewCell";
 }
 
 
-#pragma mark - JMNotification
-- (void)addLocalNotification {
-    [[JMNotificationCenter sharedInstance] addLocalNotificationWithFireDate:[NSDate date] activityId:1 activityTitle:@"hello"];
-}
-
-- (void)removeLocalNotification {
-    [[JMNotificationCenter sharedInstance] removeNotificationWithActivityID:1];
-}
+//#pragma mark - JMNotification
+//- (void)addLocalNotification {
+//    [[JMNotificationCenter sharedInstance] addLocalNotificationWithFireDate:[NSDate date] activityId:1 activityTitle:@"hello"];
+//}
+//
+//- (void)removeLocalNotification {
+//    [[JMNotificationCenter sharedInstance] removeNotificationWithActivityID:1];
+//}
 
 
 #pragma mark - UITableView

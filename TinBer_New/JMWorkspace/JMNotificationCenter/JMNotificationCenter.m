@@ -19,32 +19,44 @@
     return instance;
 }
 
-- (void)addLocalNotificationWithFireDate:(NSDate *)date activityId:(NSInteger)aid activityTitle:(NSString *)title {
+- (void)addLocalNotificationWithFireDate:(NSDate *)date activityId:(NSString *)aid activityTitle:(NSString *)title {
     
-    NSDate *time = [NSDate dateWithTimeIntervalSinceNow:10.f];
-    NSComparisonResult result = [time compare:date];
+//    NSDate *time = [NSDate dateWithTimeIntervalSinceNow:10.f];
+//    NSComparisonResult result = [time compare:date];
+//    
+//    if (result == NSOrderedDescending) {
+//        
+//        UILocalNotification *notification = [[UILocalNotification alloc] init];
+//        notification.fireDate = [date dateByAddingTimeInterval:10.f];
+//        notification.applicationIconBadgeNumber = 1;
+//        notification.soundName = UILocalNotificationDefaultSoundName;
+//        notification.alertBody = title;
+//        notification.repeatInterval = NSCalendarUnitDay;
+//        notification.userInfo = @{@"id":@(aid)};
+//        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+//    }
     
-    if (result == NSOrderedDescending) {
-        
+
         UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.fireDate = [date dateByAddingTimeInterval:10.f];
+        notification.fireDate = date;
         notification.applicationIconBadgeNumber = 1;
         notification.soundName = UILocalNotificationDefaultSoundName;
         notification.alertBody = title;
         notification.repeatInterval = NSCalendarUnitDay;
-        notification.userInfo = @{@"id":@(aid)};
+        notification.userInfo = @{@"pushID":aid};
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    }
+    
+    
 }
-- (void)removeNotificationWithActivityID:(NSInteger)aid {
+- (void)removeNotificationWithActivityID:(NSString *)aid {
     UIApplication *application = [UIApplication sharedApplication];
     NSArray *localNotifications = [application scheduledLocalNotifications];
 
     [localNotifications enumerateObjectsUsingBlock:^(UILocalNotification *obj, NSUInteger idx, BOOL *stop) {
-        NSInteger activityId = [[obj.userInfo objectForKey:@"id"] intValue];
-        if (aid == activityId) {
+        NSString  *activityId = [obj.userInfo objectForKey:@"pushID"];
+        if ([aid isEqualToString:activityId]) {
             [application cancelLocalNotification:obj];
-            NSLog(@"取消推送 ID:%@",@(activityId));
+            NSLog(@"取消推送 ID:%@",activityId);
             return ;
         }
     }];

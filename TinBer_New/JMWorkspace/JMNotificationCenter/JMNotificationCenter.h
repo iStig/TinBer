@@ -10,6 +10,6 @@
 
 @interface JMNotificationCenter : NSObject
 + (instancetype)sharedInstance;
-- (void)addLocalNotificationWithFireDate:(NSDate *)date activityId:(NSInteger)aid activityTitle:(NSString *)title;
-- (void)removeNotificationWithActivityID:(NSInteger)aid;
+- (void)addLocalNotificationWithFireDate:(NSDate *)date activityId:(NSString *)aid activityTitle:(NSString *)title;
+- (void)removeNotificationWithActivityID:(NSString *)aid;
 @end

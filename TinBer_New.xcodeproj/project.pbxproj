@@ -90,6 +90,8 @@
 		625159C91B6000F700E8248C /* FMRadioEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C31B6000F700E8248C /* FMRadioEvent.m */; };
 		625159CA1B6000F700E8248C /* FMRadioPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C51B6000F700E8248C /* FMRadioPusher.m */; };
 		625159CB1B6000F700E8248C /* FMRadioReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 625159C71B6000F700E8248C /* FMRadioReminder.m */; };
+		626C5FCB1B69368700B66E40 /* ReminderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 626C5FC91B69368700B66E40 /* ReminderViewCell.m */; };
+		626C5FCC1B69368700B66E40 /* ReminderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626C5FCA1B69368700B66E40 /* ReminderViewCell.xib */; };
 		629C641C1B59DF6B00A486D5 /* JMNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */; };
 		629EAEAD1B51636400301DB8 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 629EAEAC1B51636400301DB8 /* JMCoreDataManager.m */; };
 		629EAEBE1B5264BE00301DB8 /* JMRadioEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 629EAEBD1B5264BE00301DB8 /* JMRadioEventButton.m */; };
@@ -239,6 +241,10 @@
 		625159C51B6000F700E8248C /* FMRadioPusher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRadioPusher.m; sourceTree = "<group>"; };
 		625159C61B6000F700E8248C /* FMRadioReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRadioReminder.h; sourceTree = "<group>"; };
 		625159C71B6000F700E8248C /* FMRadioReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRadioReminder.m; sourceTree = "<group>"; };
+		626C5FC81B69368700B66E40 /* ReminderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewCell.h; sourceTree = "<group>"; };
+		626C5FC91B69368700B66E40 /* ReminderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewCell.m; sourceTree = "<group>"; };
+		626C5FCA1B69368700B66E40 /* ReminderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewCell.xib; sourceTree = "<group>"; };
+		626C5FCE1B6940D900B66E40 /* JMSwitchPushDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSwitchPushDelegate.h; sourceTree = "<group>"; };
 		629C641A1B59DF6B00A486D5 /* JMNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNotificationCenter.h; sourceTree = "<group>"; };
 		629C641B1B59DF6B00A486D5 /* JMNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNotificationCenter.m; sourceTree = "<group>"; };
 		629EAEAB1B51636400301DB8 /* JMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
@@ -425,6 +431,9 @@
 				13CD355D1B4AAF5400461000 /* MineTable Cell */,
 				13CD353F1B4A994700461000 /* MineViewController.h */,
 				13CD35401B4A994700461000 /* MineViewController.m */,
+				626C5FC81B69368700B66E40 /* ReminderViewCell.h */,
+				626C5FC91B69368700B66E40 /* ReminderViewCell.m */,
+				626C5FCA1B69368700B66E40 /* ReminderViewCell.xib */,
 				1387E49F1B4BAE6A00CB7D36 /* PersonalViewController.h */,
 				1387E4A01B4BAE6A00CB7D36 /* PersonalViewController.m */,
 				13EE5FB21B4BF25200F95C46 /* RevisePasswordViewController.h */,
@@ -600,6 +609,7 @@
 				621603AE1B4F9D9F000C3380 /* UIWindow+JMGlobalShake.h */,
 				621603AF1B4F9D9F000C3380 /* UIWindow+JMGlobalShake.m */,
 				621603B71B4F9E2B000C3380 /* JMButtonEventDelegate.h */,
+				626C5FCE1B6940D900B66E40 /* JMSwitchPushDelegate.h */,
 			);
 			path = JMShakeKit;
 			sourceTree = "<group>";
@@ -752,6 +762,7 @@
 				13CD35581B4AAB3300461000 /* TabBtnSelected2@2x.png in Resources */,
 				1387E4A81B4BB18F00CB7D36 /* photoPen@2x.png in Resources */,
 				13CD35551B4AAB3300461000 /* TabBtn4@2x.png in Resources */,
+				626C5FCC1B69368700B66E40 /* ReminderViewCell.xib in Resources */,
 				1389124C1B4CFCFE0045838F /* 37x-Checkmark@2x.png in Resources */,
 				13CD35591B4AAB3300461000 /* TabBtnSelected3@2x.png in Resources */,
 				13CD35051B4A8CC500461000 /* LaunchScreen.xib in Resources */,
@@ -852,6 +863,7 @@
 				62A2E44C1B50C8CC007EF3D3 /* JMIdentifyAudioViewController.m in Sources */,
 				13CD35201B4A8FAD00461000 /* CustomTabbarView.m in Sources */,
 				13CD35351B4A991000461000 /* ActiviesHomeViewController.m in Sources */,
+				626C5FCB1B69368700B66E40 /* ReminderViewCell.m in Sources */,
 				13CD35611B4AAF6F00461000 /* MineHeardTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

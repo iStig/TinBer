@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B7398C64-900E-4A5E-9420-055F687934B7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>TinBer_New</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1932FBAA3999074EECF2D0EB06361E71B7A05BFC</key>
 		<string>github.com:iStig/TinBer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TinBer_New.xcodeproj</string>
+	<string>TinBer_New.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1932FBAA3999074EECF2D0EB06361E71B7A05BFC</key>

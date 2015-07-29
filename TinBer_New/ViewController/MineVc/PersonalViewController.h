@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class FMRadioReminder;
 @interface PersonalViewController : CommonViewController
-
+@property (nonatomic, strong) FMRadioReminder *reminder;
 @end
